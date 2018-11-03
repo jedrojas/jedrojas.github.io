@@ -2,6 +2,7 @@
   "name": "concessioningapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jedrojas.github.io/",
   "dependencies": {
     "adb": "^0.2.0",
     "babel-core": "^7.0.0-bridge.0",
@@ -9,6 +10,7 @@
     "bootstrap": "^4.1.1",
     "expo": "^30.0.1",
     "expo-cli": "^2.2.4",
+    "gh-pages": "^2.0.1",
     "jest": "^23.6.0",
     "metro-react-native-babel-preset": "^0.47.0",
     "react": "^16.5.2",
@@ -27,7 +29,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
+    "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
