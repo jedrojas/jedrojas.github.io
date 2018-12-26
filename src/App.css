@@ -30,3 +30,49 @@
     transform: rotate(360deg);
   }
 }
+
+.home {
+  height: 100vh;
+  background-color: #1c1c1c;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    min-height: 125vh;
+  }
+}
+
+.navbar {
+  z-index: 5;
+}
+
+.about {
+  height: 65vh;
+  background-color: #1c1c1c;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    min-height: 110vh;
+  }
+}
+
+.contact {
+  height: 50vh;
+  background-color: #1c1c1c;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    min-height: 110vh;
+  }
+}

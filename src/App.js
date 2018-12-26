@@ -1,26 +1,40 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import NavigationBar from "./components/NavigationBar.jsx";
+import HomePage from "./components/HomePage.jsx";
+import AboutPage from "./components/AboutPage.jsx";
+import ContactPage from "./components/ContactPage.jsx";
 
 class App extends Component {
+  handleHomeClick = () => {
+    console.log("click happened");
+    this.refs.homeRef.scrollIntoView({ behavior: "smooth" });
+  };
+  handleAboutClick = () => {
+    this.refs.aboutRef.scrollIntoView({ behavior: "smooth" });
+  };
+  handleContactClick = () => {
+    this.refs.contactRef.scrollIntoView({ behavior: "smooth" });
+  };
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <main>
+        <NavigationBar
+          // className="navbar"
+          onHomeClick={this.handleHomeClick}
+          onAboutClick={this.handleAboutClick}
+          onContactClick={this.handleContactClick}
+        />
+        <section className="home" id="home" ref="homeRef">
+          <HomePage onAboutClick={this.handleAboutClick} />
+        </section>
+        <section className="about" id="about" ref="aboutRef">
+          <AboutPage />
+        </section>
+        <section className="contact" id="contact" ref="contactRef">
+          <ContactPage />
+        </section>
+      </main>
     );
   }
 }
