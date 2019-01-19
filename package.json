@@ -8,7 +8,7 @@
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.1"
   },
-  "homepage": "http://jedrojas.github.io/jedrojas.github.io",
+  "homepage": "http://jedrojas.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
